@@ -497,6 +497,14 @@ static void init_device(void)
                 	fmt.fmt.pix.field       = V4L2_FIELD_INTERLACED;
 		}
 		else if(force_format==1){
+			fmt.fmt.pix.width       = 1280;     
+           		fmt.fmt.pix.height      = 720;  
+  			fmt.fmt.pix.pixelformat = V4L2_PIX_FMT_MJPEG;
+                	fmt.fmt.pix.field       = V4L2_FIELD_INTERLACED;
+		}
+			
+			
+		else if(force_format==0){
 			fmt.fmt.pix.width	= 640;
 			fmt.fmt.pix.height	= 480;
 			fmt.fmt.pix.pixelformat = V4L2_PIX_FMT_YUYV;
